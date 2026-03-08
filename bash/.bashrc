@@ -57,11 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-<<<<<<< HEAD
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-=======
    PS1="${GRUV_FG_YELLOW}\w${GRUV_BG_NONE} ${GRUV_FG_GREEN}➤ ${GRUV_BG_NONE}"
->>>>>>> bde1e4a (feat: kitty, starship updated)
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -119,21 +115,17 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-<<<<<<< HEAD
 export PATH=$PATH:$HOME/.local/bin:$PATH
 export PATH="$HOME/jdk-25.0.2+10/bin:$PATH"
 export PATH="/usr/local/go/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 . "$HOME/.cargo/env"
-=======
 
->>>>>>> bde1e4a (feat: kitty, starship updated)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-<<<<<<< HEAD
 # pnpm
 export PNPM_HOME="/home/prathith/.local/share/pnpm"
 case ":$PATH:" in
@@ -141,7 +133,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-=======
 pathadd() { case ":$PATH:" in *":$1:"*) ;; *) export PATH="$1:$PATH" ;; esac; }
 
 # PATH variables
@@ -164,4 +155,3 @@ export PNPM_HOME="/home/prathith/.local/share/pnpm"
 
 # Starship
 eval "$(starship init bash)"
->>>>>>> bde1e4a (feat: kitty, starship updated)
