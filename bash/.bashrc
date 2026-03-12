@@ -145,6 +145,7 @@ pathadd "$HOME/.local/share/pnpm"
 
 [[ -d "$HOME/.local/share/bob/nvim-bim" ]] && pathadd "$HOME/.local/share/bob/nvim-bim"
 [[ -d "$HOME/.emacs.d/bin" ]] && pathadd "$HOME/.emacs.d/bin"
+[[ -d "$HOME/.config/emacs/bin" ]] && pathadd "$HOME/.config/emacs/bin"
 [[ -d "$HOME/lua-language-server-3.15.0-linux-x64/bin" ]] && pathadd "$HOME/lua-language-server-3.15.0-linux-x64/bin"
 
 alias emacs="emacsclient -c -a "emacs" -F \"'(fullscreen . maximized)\""
