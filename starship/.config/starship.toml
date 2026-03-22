@@ -1,5 +1,7 @@
-"$schema" = 'https://starship.rs/config-schema.json'
+# this is for error checking when using an IDE
+# "$schema" = 'https://starship.rs/config-schema.json'
 
+add_newline = false
 [aws]
 symbol = " "
 
