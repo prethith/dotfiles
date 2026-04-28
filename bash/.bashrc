@@ -142,6 +142,7 @@ pathadd "/usr/local/go/bin"
 pathadd "$HOME/go/bin"
 pathadd "$HOME/.juliaup/bin"
 pathadd "$HOME/.local/share/pnpm"
+pathadd "/usr/local/protobuf/bin"
 
 [[ -d "$HOME/.local/share/bob/nvim-bim" ]] && pathadd "$HOME/.local/share/bob/nvim-bim"
 [[ -d "$HOME/.emacs.d/bin" ]] && pathadd "$HOME/.emacs.d/bin"
@@ -156,3 +157,11 @@ export PNPM_HOME="/home/prathith/.local/share/pnpm"
 
 # Starship
 eval "$(starship init bash)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/prathith/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
+# opencode
+export PATH=/home/prathith/.opencode/bin:$PATH
