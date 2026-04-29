@@ -1,0 +1,21 @@
+theme = Gruvbox Dark Hard
+window-decoration = none
+gtk-titlebar-hide-when-maximized = true
+
+# Font settings
+font-family = "Lilex Nerd Font Mono"
+font-size = 18
+
+# Background
+background-opacity = 0.96
+
+# Window settings
+window-padding-color = extend-always
+
+# Add some nice looking padding
+window-padding-x = 16
+window-padding-y = 16
+
+# Cursor settings
+shell-integration-features = no-cursor
+cursor-style = block
