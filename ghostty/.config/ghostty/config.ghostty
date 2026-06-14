@@ -1,16 +1,17 @@
-theme = Gruvbox Dark Hard
+theme = Monokai Remastered
 window-decoration = none
 gtk-titlebar-hide-when-maximized = true
 
 # Font settings
-font-family = "Lilex Nerd Font Mono"
+font-family = "JetBrainsMonoNL Nerd Font Mono"
 font-size = 18
 
 # Background
-background-opacity = 0.96
+background-opacity = 0.8
 
 # Window settings
 window-padding-color = extend-always
+fullscreen = true
 
 # Add some nice looking padding
 window-padding-x = 16

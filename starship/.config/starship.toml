@@ -1,6 +1,7 @@
 # this is for error checking when using an IDE
 # "$schema" = 'https://starship.rs/config-schema.json'
 
+command_timeout = 2000
 add_newline = false
 [aws]
 symbol = " "
@@ -155,3 +156,4 @@ symbol = " "
 
 [zig]
 symbol = " "
+

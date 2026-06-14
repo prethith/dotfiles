@@ -115,53 +115,45 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export PATH=$PATH:$HOME/.local/bin:$PATH
-export PATH="$HOME/jdk-25.0.2+10/bin:$PATH"
-export PATH="/usr/local/go/bin:$PATH"
-export PATH="$HOME/go/bin:$PATH"
-. "$HOME/.cargo/env"
-
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# pnpm
-export PNPM_HOME="/home/prathith/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+# Helper to safely add to PATH
 pathadd() { case ":$PATH:" in *":$1:"*) ;; *) export PATH="$1:$PATH" ;; esac; }
 
-# PATH variables
+# Core paths
 pathadd "$HOME/.local/bin"
 pathadd "$HOME/jdk-25.0.2+10/bin"
 pathadd "/usr/local/go/bin"
 pathadd "$HOME/go/bin"
 pathadd "$HOME/.juliaup/bin"
-pathadd "$HOME/.local/share/pnpm"
 pathadd "/usr/local/protobuf/bin"
+pathadd "$HOME/.local/share/pnpm"
+pathadd "$HOME/.local/zig"
 
-[[ -d "$HOME/.local/share/bob/nvim-bim" ]] && pathadd "$HOME/.local/share/bob/nvim-bim"
-[[ -d "$HOME/.emacs.d/bin" ]] && pathadd "$HOME/.emacs.d/bin"
-[[ -d "$HOME/.config/emacs/bin" ]] && pathadd "$HOME/.config/emacs/bin"
+# Optional tools (conditional)
+[[ -d "$HOME/.local/share/bob/nvim-bim" ]]              && pathadd "$HOME/.local/share/bob/nvim-bim"
+[[ -d "$HOME/.emacs.d/bin" ]]                           && pathadd "$HOME/.emacs.d/bin"
+[[ -d "$HOME/.config/emacs/bin" ]]                      && pathadd "$HOME/.config/emacs/bin"
 [[ -d "$HOME/lua-language-server-3.15.0-linux-x64/bin" ]] && pathadd "$HOME/lua-language-server-3.15.0-linux-x64/bin"
 
-alias emacs="emacsclient -c -a "emacs" -F \"'(fullscreen . maximized)\""
-export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-. "$HOME/.cargo/env"
-
-export PNPM_HOME="/home/prathith/.local/share/pnpm"
-
-# Starship
-eval "$(starship init bash)"
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/prathith/.lmstudio/bin"
-# End of LM Studio CLI section
-
+# LM Studio
+pathadd "$HOME/.lmstudio/bin"
 
 # opencode
-export PATH=/home/prathith/.opencode/bin:$PATH
+pathadd "$HOME/.opencode/bin"
+
+# Rust
+. "$HOME/.cargo/env"
+
+# Node (nvm)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ]          && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# pnpm
+export PNPM_HOME="/home/prathith/.local/share/pnpm"
+
+# Misc
+export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
+alias emacs='emacsclient -c -a "emacs" -F "'"'"'(fullscreen . maximized)"'
+
+# Starship (should be the last)
+eval "$(starship init bash)"
