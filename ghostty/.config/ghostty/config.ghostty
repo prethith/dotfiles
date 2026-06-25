@@ -1,22 +1,29 @@
-theme = Monokai Remastered
+theme = Srcery
 window-decoration = none
 gtk-titlebar-hide-when-maximized = true
 
 # Font settings
-font-family = "JetBrainsMonoNL Nerd Font Mono"
+font-family = "JetBrainsMonoNL NFM"
 font-size = 18
 
 # Background
-background-opacity = 0.8
+background-opacity = 0.9
 
 # Window settings
 window-padding-color = extend-always
-fullscreen = true
+fullscreen = false
 
 # Add some nice looking padding
-window-padding-x = 16
-window-padding-y = 16
+window-padding-x = 8
+window-padding-y = 8
 
 # Cursor settings
 shell-integration-features = no-cursor
 cursor-style = block
+
+# shell integration
+shell-integration = bash
+
+# tabs
+gtk-titlebar = false
+gtk-tabs-location = bottom
