@@ -8,6 +8,7 @@ require("options")
 require("commands")
 require("pack")
 require("plugins")
+require("lsp")
 
 -- =======================================================
 -- colorscheme

@@ -1,7 +1,16 @@
 -- =======================================================
 -- gitsigns
 -- =======================================================
-require('gitsigns').setup({})
+require('gitsigns').setup({
+  signs = {
+    add          = { text = "\u{258E}" },
+    change       = { text = "\u{258E}" },
+    delete       = { text = "\u{2594}" },
+    topdelete    = { text = "\u{2581}" },
+    changedelete = { text = "\u{2506}" },
+    untracked    = { text = "\u{2506}" },
+  },
+})
 
 -- =======================================================
 -- mini.nvim
