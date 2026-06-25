@@ -7,9 +7,9 @@ vim.opt.relativenumber = true -- relative line numbers
 vim.opt.cursorline = true -- highlight current line
 vim.opt.scrolloff = 10 -- keep 10 lines above/below cursor
 
-vim.opt.tabstop = 4 -- tab width
-vim.opt.shiftwidth = 4 -- indent width
-vim.opt.softtabstop = 4 -- soft tab stop, not tabs on tab/bckspc
+vim.opt.tabstop = 2 -- tab width
+vim.opt.shiftwidth = 2 -- indent width
+vim.opt.softtabstop = 2 -- soft tab stop, not tabs on tab/bckspc
 vim.opt.expandtab = true -- use spaces instead of tabs
 vim.opt.smartindent = true -- smart autoindent
 vim.opt.autoindent = true -- copy indent from current line

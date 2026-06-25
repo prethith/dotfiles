@@ -3,18 +3,22 @@
 -- =======================================================
 
 require("vim._core.ui2").enable({})
-require("options")
 require("keymaps")
-require("autocmds")
+require("options")
+require("commands")
+require("pack")
+require("plugins")
 
 -- =======================================================
--- PLUGIN INSTALLS
+-- colorscheme
 -- =======================================================
-vim.pack.add({
-{ src = 'https://github.com/srcery-colors/srcery-vim' },
-'https://github.com/nvim-tree/nvim-web-devicons',
-'https://github.com/nvim-lualine/lualine.nvim'
-})
-
+vim.g.srcery_italic = 0
+vim.g.srcery_inverse = 0
+vim.g.srcery_underline = 0
+vim.g.srcery_normal_float = 1
 vim.cmd.colorscheme('srcery')
+
+-- =======================================================
+-- lualine
+-- =======================================================
 require('lualine').setup()
