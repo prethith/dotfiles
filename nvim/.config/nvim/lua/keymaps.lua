@@ -48,7 +48,8 @@ vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "move down in buffer with cursor centred" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "move up in buffer with cursor centred" })
-
+-- Show diagnostics under cursor
+vim.keymap.set("n", "gl", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace word cursor is on globally" })
 
 -- Duplicate line

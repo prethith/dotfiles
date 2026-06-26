@@ -13,6 +13,45 @@ require('gitsigns').setup({
 })
 
 -- =======================================================
+-- snacks.nvim
+-- =======================================================
+
+require("snacks").setup({
+  explorer = {
+    enable = true,
+  },
+  picker = {
+    enable = true
+  },
+  indent = {
+    priority = 1,
+    enabled = true,
+    char = ".",
+    animate = {
+      enabled = false
+    }
+  },
+  image = {
+    enable = true,
+  },
+})
+
+--- Explorer ---
+vim.keymap.set("n", "-", function() Snacks.explorer() end, { desc = "Explorer"})
+-- Keybindings
+-- TAB => select file/files
+-- m => move to dir when files are selected. rename if no file is selected. 
+-- c => copy to dir, if file is selected
+-- r => rename current file
+-- d => delete current/selected files
+-- a => add new file/dir
+-- o => open with system app
+-- . => set dir as cwd
+-- H => toggle hidden files
+-- I => toggle gitignored files
+-- <leader>/ => search
+
+-- =======================================================
 -- mini.nvim
 -- =======================================================
 
@@ -46,7 +85,7 @@ require("mini.notify").setup({
   },
 })
 
-vim.keymap.set("n", "-", "<cmd>lua MiniFiles.open()<CR>", { desc = "Toggle mini file explorer" })
+-- vim.keymap.set("n", "-", "<cmd>lua MiniFiles.open()<CR>", { desc = "Toggle mini file explorer" })
 
 require("mini.diff").setup({
 	view = {
@@ -65,19 +104,11 @@ vim.keymap.set("n", "<leader>pf", function() MiniPick.builtin.files() end, { des
 require("mini.git").setup({})
 
 local MiniDiff = require("mini.diff")
-vim.keymap.set("n", "]h", function()
-	MiniDiff.goto_hunk("next")
-end, { desc = "Next git hunk" })
-vim.keymap.set("n", "[h", function()
-	MiniDiff.goto_hunk("prev")
-end, { desc = "Prev git hunk" })
+vim.keymap.set("n", "]h", function() MiniDiff.goto_hunk("next") end, { desc = "Next git hunk" })
+vim.keymap.set("n", "[h", function() MiniDiff.goto_hunk("prev") end, { desc = "Prev git hunk" })
 vim.keymap.set("n", "<leader>hs", MiniDiff.operator, { desc = "Stage hunk" })
-vim.keymap.set("n", "<leader>hp", function()
-	MiniDiff.toggle_overlay()
-end, { desc = "Preview diff overlay" })
-vim.keymap.set("n", "<leader>hb", function()
-	require("mini.git").show_at_cursor()
-end, { desc = "Git blame/show" })
+vim.keymap.set("n", "<leader>hp", function() MiniDiff.toggle_overlay() end, { desc = "Preview diff overlay" })
+vim.keymap.set("n", "<leader>hb", function() require("mini.git").show_at_cursor() end, { desc = "Git blame/show" })
 
 
 -- =======================================================
