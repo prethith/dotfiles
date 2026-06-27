@@ -1,4 +1,4 @@
-theme = Srcery
+theme = Gruvbox Dark Hard
 window-decoration = none
 gtk-titlebar-hide-when-maximized = true
 

@@ -6,7 +6,7 @@ vim.opt.number = true -- line number
 vim.opt.relativenumber = true -- relative line numbers
 vim.opt.cursorline = true -- highlight current line
 vim.opt.scrolloff = 10 -- keep 10 lines above/below cursor
-vim.opt.signcolumn = "yes:1" -- always display 1 signcolumn
+vim.opt.signcolumn = "no" -- always display 1 signcolumn
 vim.opt.confirm = true -- confirm before saving
 
 vim.opt.tabstop = 2 -- tab width
@@ -63,4 +63,3 @@ vim.opt.splitright = true -- vertical splits go right
 
 vim.opt.wildmenu = true -- tab completion
 vim.opt.wildmode = "longest:full,full" -- complete longest common match, full completion list, cycle with tab
-

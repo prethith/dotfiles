@@ -102,6 +102,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 alias rm='rm -i'
+alias ll='eza -al --group-directories-first'
+alias lt='eza -al --sort=modified'
+alias ls='eza --icons'
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
