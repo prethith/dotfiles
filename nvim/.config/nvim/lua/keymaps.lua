@@ -50,7 +50,12 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "move down in buffer with curso
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "move up in buffer with cursor centred" })
 -- Show diagnostics under cursor
 vim.keymap.set("n", "gl", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace word cursor is on globally" })
+vim.keymap.set(
+	"n",
+	"<leader>s",
+	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+	{ desc = "Replace word cursor is on globally" }
+)
 
 -- Duplicate line
 vim.keymap.set("n", "<S-A-Down>", "yyp")
@@ -65,4 +70,3 @@ end, { desc = "Copy full file path" })
 vim.keymap.set("n", "<leader>td", function()
 	vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end, { desc = "Toggle diagnostics" })
-

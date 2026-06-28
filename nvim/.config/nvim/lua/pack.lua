@@ -25,6 +25,7 @@ vim.pack.add({
 	"https://github.com/L3MON4D3/LuaSnip",
 	"https://github.com/sainnhe/gruvbox-material",
 	"https://github.com/brenoprata10/nvim-highlight-colors",
+	"https://github.com/akinsho/toggleterm.nvim",
 })
 
 local function packadd(name)
@@ -41,3 +42,4 @@ packadd("LuaSnip")
 packadd("lspsaga.nvim")
 packadd("kanso.nvim")
 packadd("nvim-highlight-colors")
+packadd("toggleterm.nvim")
