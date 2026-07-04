@@ -26,6 +26,11 @@ vim.pack.add({
 	"https://github.com/sainnhe/gruvbox-material",
 	"https://github.com/brenoprata10/nvim-highlight-colors",
 	"https://github.com/akinsho/toggleterm.nvim",
+	{
+		src = "https://github.com/mrcjkb/rustaceanvim",
+		version = vim.version.range("^9"),
+	},
+	"https://github.com/jake-stewart/multicursor.nvim",
 })
 
 local function packadd(name)
@@ -43,3 +48,5 @@ packadd("lspsaga.nvim")
 packadd("kanso.nvim")
 packadd("nvim-highlight-colors")
 packadd("toggleterm.nvim")
+packadd("rustaceanvim")
+packadd("multicursor.nvim")

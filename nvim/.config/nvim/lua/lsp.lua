@@ -165,7 +165,7 @@ vim.lsp.config("basedpyright", {})
 vim.lsp.config("bashls", {})
 vim.lsp.config("gopls", {})
 vim.lsp.config("clangd", {})
-vim.lsp.config("rust_analyzer", {})
+-- vim.lsp.config("rust_analyzer", {})
 vim.lsp.config("emmet_language_server", {})
 vim.lsp.config("texlab", {})
 vim.lsp.config("tsgo", {})
@@ -227,7 +227,7 @@ do
 			"lua",
 			"markdown",
 			"python",
-			"rust",
+			-- "rust",
 			"sh",
 			"sql",
 			"typescript",
@@ -251,7 +251,7 @@ do
 				lua = { luacheck, stylua },
 				markdown = { prettier_d },
 				python = { ruff_fmt, ruff_lint },
-				rust = { dprint },
+				-- rust = { dprint },
 				sh = { shellcheck, shfmt },
 				sql = { sqlfluff, sql_formatter },
 				typescript = { eslint_d, prettier_d },
@@ -276,7 +276,7 @@ vim.lsp.enable({
 	"lua_ls",
 	"markdown_oxide",
 	"roslyn_ls",
-	"rust_analyzer",
+	-- "rust_analyzer",
 	"sqlls",
 	"sqls",
 	"texlab",
